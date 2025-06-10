@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/qc_generator.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jsrsasign-all-min.js"></script>
+    <meta charset="utf-8" http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+</head>
+
+<body>
+    <div class="navbar-div"></div>
+    <div id="qcGen_please_wait_text">
+        <h1>
+            Please wait...
+        </h1>
+    </div>
+    <div id="qcGen_please_wait"></div>
+    <div class="main-body">
+        <h1>qc Generator</h1>
+        <div id="qcGen_options" class="qcGen_inline">
+            <form id="qcGen_options_form" action="#">
+                <div id="qcGen_country">
+                    Country:<br>
+                    <select id="qcGen_country_selecter" name="qcGen_country_select">
+                        <option selected disabled>Pick Option</option>
+                    </select>
+                </div>
+                <br>
+                <div id="qcGen_type" class="qcGen_hidden">
+                    Type:<br>
+                    <select id="qcGen_types" name="qcGen_type">
+                        <option selected disabled>Pick Option</option>
+                        <option>Web</option>
+                        <option>Seal</option>
+                    </select>
+                </div>
+                <br>
+                <div id="qcGen_roles" class="qcGen_hidden">
+                    Roles:<br>
+                    <input type="checkbox" id="qcGen_roles_aisp" name="qcGen_roles_aisp">
+                    <label for="qcGen_roles_aisp">AISP</label><br>
+                    <input type="checkbox" id="qcGen_roles_pisp" name="qcGen_roles_pisp">
+                    <label for="qcGen_roles_pisp">PISP</label><br>
+                    <input type="checkbox" id="qcGen_roles_aspsp" name="qcGen_roles_aspsp">
+                    <label for="qcGen_roles_aspsp">ASPSP</label><br>
+                    <input type="checkbox" id="qcGen_roles_cbpii" name="qcGen_roles_cbpii">
+                    <label for="qcGen_roles_cbpii">CBPII</label><br>
+                </div>
+                <br>
+                <div id="qcGen_submit" class="qcGen_hidden">
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+        <div id="qcGen_generated" class="qcGen_inline">
+            qcStatement:<br>
+            <textarea id="qcGen_generated_qcStatement"></textarea>
+                <br><br>
+                <button id="qcGen_copy_values">Copy</button>
+                <button id="qcGen_clear_values">Clear</button>
+                <h4 id="qcGen_copy_values_text"></h4>
+            </div>
+        </div>
+    </div>
+    <script src="/js/navbar.js"></script>
+    <script src="/js/qc_generator/qc_generator.js"></script>
+    <script src="/js/qc_generator/qc_gen.js"></script>
+    <script src="/js/qc_generator/nca_data_set.js"></script>
+</body>
+
+</html>

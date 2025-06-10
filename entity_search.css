@@ -1,0 +1,24 @@
+#entity_search_box {
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+table {
+    width: 100%;
+}
+
+.entity_details_headers {
+    width: 10px
+}
+
+#entity_software_statement_details {
+    display: none;
+}
+
+a {
+    color: white;
+}

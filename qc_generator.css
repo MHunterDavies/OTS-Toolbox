@@ -1,0 +1,51 @@
+#qcGen_please_wait_text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: #333;
+    z-index: 10000;
+}
+
+#qcGen_please_wait {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    opacity: 50%;
+}
+
+.qcGen_hidden {
+    display: none;
+}
+
+.qcGen_inline {
+    display: inline-block;
+}
+
+#qcGen_options {
+    position: relative;
+    float: left;
+}
+
+#qcGen_generated {
+    position: relative;
+    float: right;
+}
+
+#qcGen_generated_buttons a {
+    text-decoration: none;
+}
+
+#qcGen_generated > textarea {
+    width: 325px;
+    font-size: 13px;
+    height: 140px;
+    resize: none;
+}

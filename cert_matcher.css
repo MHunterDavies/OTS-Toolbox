@@ -1,0 +1,22 @@
+
+.match_inline {
+    display: inline-block;
+}
+
+#match_output_div {
+    width: 150px;
+    margin: 0;
+    padding: 0;
+}
+
+#match_input_div {
+    position: relative;
+    float: right;
+}
+
+#match_input_div > textarea {
+    width: 325px;
+    font-size: 8px;
+    height: 140px;
+    resize: none;
+}

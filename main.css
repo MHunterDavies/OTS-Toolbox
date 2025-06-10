@@ -1,0 +1,17 @@
+html {
+    width: 800px;
+    min-height: 550px;
+}
+
+body {
+    font-family: Consolas;
+    color: #fff;
+    background-color: #2d2d2d;
+    margin: 0;
+}
+
+.main-body {
+    position: relative;
+    padding: 0;
+    margin: 2%;
+}

@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/cert_maker.css">
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jsrsasign-all-min.js"></script>
+    <meta charset="utf-8" http-equiv="Content-Security-Policy"
+        content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+</head>
+
+<body>
+    <div class="navbar-div"></div>
+    <div id="cert_please_wait_text">
+        <h1>
+            Please wait...
+        </h1>
+    </div>
+    <div id="cert_please_wait"></div>
+    <div class="main-body">
+        <h1>Cert Maker</h1>
+        <div id="cert_options" class="cert_inline">
+            <form id="cert_options_form" action="#">
+                <div id="cert_type">
+                    Type:<br>
+                    <select id="cert_types" name="cert_type">
+                        <option selected disabled>Pick Option</option>
+                        <option>OBTransport</option>
+                        <option>OBSigning</option>
+                        <option>OBWAC</option>
+                        <option>OBSeal</option>
+                    </select>
+                </div>
+                <br>
+                <div id="cert_roles" style="display:none;">
+                    Roles:<br>
+                    <input type="checkbox" id="cert_roles_aisp" name="cert_roles_aisp">
+                    <label for="cert_roles_aisp">AISP</label><br>
+                    <input type="checkbox" id="cert_roles_pisp" name="cert_roles_pisp">
+                    <label for="cert_roles_pisp">PISP</label><br>
+                    <input type="checkbox" id="cert_roles_aspsp" name="cert_roles_aspsp">
+                    <label for="cert_roles_aspsp">ASPSP</label><br>
+                    <input type="checkbox" id="cert_roles_cbpii" name="cert_roles_cbpii">
+                    <label for="cert_roles_cbpii">CBPII</label><br>
+                </div>
+
+                <div id="cert_org_name" style="display:none;">
+                    Organisation Name:<br>
+                    <input maxlength=75 name="cert_org_name"
+                        title="Max of 75 characters. Example: Open Banking Limited (A)">
+                </div>
+
+                <div id="cert_etsi_id" style="display:none;">
+                    Organisation Identifier (ETSI ID):<br>
+                    <input maxlength=50 name="cert_etsi_id" title="Max of 50 characters. Example: PSDGB-FCA-123456">
+                </div>
+
+                <div id="cert_org_id" style="display:none;">
+                    Organisation ID (OB org ID):<br>
+                    <input maxlength=19 name="cert_org_id" title="Max of 18 characters. Example: 0015800001041RbAAI">
+                </div>
+
+                <div id="cert_ss_id" style="display:none;">
+                    Software Statement:<br>
+                    <input maxlength=23 name="cert_ss_id" title="Max of 22 characters. Example: bWaKB1ZMOxzHMzaVOwVNF1">
+                </div>
+
+                <div id="cert_submit" style="display:none;">
+                    <br>
+                    <input type="submit">
+                </div>
+            </form>
+        </div>
+        <div id="cert_generated" class="cert_inline">
+            CSR:<br>
+            <textarea id="cert_generated_csr"></textarea>
+            <br><br>
+            KEY:<br>
+            <textarea id="cert_generated_key"></textarea>
+            <br><br>
+            <div id="cert_generated_buttons">
+                <a id="cert_save_csr_a" download="" href="">
+                    <button id="cert_save_csr_button">Save CSR</button>
+                </a>
+                <a id="cert_save_key_a" download="" href="">
+                    <button id="cert_save_key_button">Save KEY</button>
+                </a>
+                <button id="cert_copy_values">Copy</button>
+                <button id="cert_clear_values">Clear</button>
+                <h4 id="cert_copy_values_text"></h4>
+                <button id="cert_generated_match" type="button" hidden>Do it match? THIS DONT WORK</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/navbar.js"></script>
+    <script src="/js/cert_maker/cert_gen.js"></script>
+    <script src="/js/cert_maker/cert_maker.js"></script>
+</body>
+
+</html>

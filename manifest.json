@@ -1,0 +1,31 @@
+{
+    "name": "OTS Toolbox",
+    "description": "A set of useful tools that the OTS team utilise in their daily tasks.",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "homepage_url": "https://proactionuk.ent.cgi.com/confluence/display/OBIEAMSD/Level+2+Knowledge+Base",
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "browser_action": {
+        "default_icon": {
+            "16": "/pics/ots_toolbox_icon_16.png",
+            "32": "/pics/ots_toolbox_icon_32.png",
+            "64": "/pics/ots_toolbox_icon_64.png",
+            "128": "/pics/ots_toolbox_icon_128.png",
+            "256": "/pics/ots_toolbox_icon_256.png",
+            "512": "/pics/ots_toolbox_icon_512.png"
+        },
+        "default_title": "OTS Toolbox",
+        "default_popup": "index.html"
+    },
+    "icons": {
+        "16": "/pics/ots_toolbox_icon_16.png",
+        "32": "/pics/ots_toolbox_icon_32.png",
+        "64": "/pics/ots_toolbox_icon_64.png",
+        "128": "/pics/ots_toolbox_icon_128.png",
+        "256": "/pics/ots_toolbox_icon_256.png",
+        "512": "/pics/ots_toolbox_icon_512.png"
+    },
+    "permissions": ["contextMenus"]
+}

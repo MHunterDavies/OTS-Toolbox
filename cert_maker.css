@@ -1,0 +1,47 @@
+#cert_please_wait_text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border: #333;
+    z-index: 10000;
+}
+
+#cert_please_wait {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    opacity: 50%;
+}
+
+.cert_inline {
+    display: inline-block;
+}
+
+#cert_options {
+    position: relative;
+    float: left;
+}
+
+#cert_generated {
+    position: relative;
+    float: right;
+}
+
+#cert_generated_buttons a {
+    text-decoration: none;
+}
+
+#cert_generated > textarea {
+    width: 325px;
+    font-size: 8px;
+    height: 140px;
+    resize: none;
+}
