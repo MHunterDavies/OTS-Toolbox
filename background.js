@@ -119,8 +119,9 @@ function newTicketsNotifier(ticketNumbers) {
     var hour = today.getHours();
     var silentNotify = true;
 
-    if (!(hour > 8 && hour > 18)) {
-        silentNotify = false
+    // Notify only during standard working hours (9am-6pm)
+    if (hour > 8 && hour < 18) {
+        silentNotify = false;
     }
 
     if (ticketNumbers > 0) {
@@ -215,7 +216,6 @@ window.onload = function () {
         }
     }
 };
-.
 
 
 // --------------- Initiate Request Loop --------------- // 
